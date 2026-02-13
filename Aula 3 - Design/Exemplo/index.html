@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./src/style.css">
+    <title>Design Responsivo e Media Query</title>
+</head>
+
+<body>
+
+    <header id="topo-loja">
+        <h1>TechFood - Sabor&Saber</h1>
+
+        <input type="checkbox" id="bt-menu"> <!-- Padronização na nomeação do botão, para que não tenham muitas distinções em relação às outras que terão algum elemento já utilizado-->
+        <label for="bt-menu" id="label-menu">&#9776;</label> <!-- Vinculação do "label" para realizar um "input" | 9976 -->
+
+        <nav id="menu">
+            <ul>
+                <li><a href="secao-massas">Massas</a></li>
+                <li><a href="secao-sobremesas">Sobremesas</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <main>
+        <section id="secao-massas">
+            <h2 class="titulo-secao">Nossas Massas:</h2>
+            <div class="vitrine-grid"> <!-- Como é um conteúdo e não uma estrtura, pode ser utilizado para a criação de uma seção dos alimentos -->
+                <article class="card">
+                    <img src="" alt="Lasanha a bolonhesa">
+                    <h3>Lasanha Bolonhesa</h3>
+                    <p class="desc">Massa artesanal e molho especial.</p> <!-- "p.desc": atalho para a criação de uma descrição -->
+                    <span class="preco">R$ 45,00</span>
+
+                    <button class="bt-pedido">Pedir agora!</button>
+                </article>
+
+                <article class="card">
+                    <img src="" alt="Nhoque ao Molho Pesto">
+                    <h3>Nhoque ao Pesto</h3>
+                    <p class="desc">Batatas frescas e manjeiricão orgânico.</p>
+                    <span class="preco">R$ 38,00</span>
+
+                    <button class="bt-pedido">Pedir agora!</button>
+                </article>
+
+                <article class="card">
+                    <img src="" alt="Espaguete a carbonara">
+                    <h3>Espaguete Carbonara</h3>
+                    <p class="desc">Receita original italiana.</p>
+                    <span class="preco">R$ 42,00</span>
+
+                    <button class="bt-pedido">Pedir agora!</button>
+                </article>
+            </div>
+        </section>
+
+        <section id="secao-sobremesas">
+            <h2 class="titulo-secao">Nossas Sobremesas:</h2>
+            <div class="vitrine-grid">
+                <article class="card">
+                    <img src="" alt="Pudim de leite">
+                    <h3>Pudim de Leite</h3>
+                    <p class="desc">O clássico com calda de caramelo.</p>
+                    <span class="preco">R$ 15,00</span>
+
+                    <button class="bt-pedido">Pedir agora!</button>
+                </article>
+
+                <article class="card">
+                    <img src="" alt="Brownie com sorvete">
+                    <h3>Brownie com Sorvete</h3>
+                    <p class="desc">Chocolate belga 70% cacau.</p>
+                    <span class="preco">R$ 22,00</span>
+
+                    <button class="bt-pedido">Pedir agora!</button>
+                </article>
+
+                <article class="card">
+                    <img src="" alt="Torta de limão">
+                    <h3>Torta de Limão</h3>
+                    <p class="desc">Crocante e refrescante.</p>
+                    <span class="preco">R$ 18,00</span>
+
+                    <button class="bt-pedido">Pedir agora!</button>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer id="rodape">
+        <div class="info-footer">
+            <p><strong>TechFood - 2026 ©</strong></p> <!-- &#169-->
+            <p>Rua Florianópolis - 123, Jardim Europa do Norte</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
