@@ -118,4 +118,44 @@
         cursor: pointer;
         margin-top: 10px;
     }
+    /* Organização da tela "compacta" */
+    .vitrine-grid {
+        grid-template-columns: 1fr;
+}
+}
+
+/* Menu Hamburger */
+#label-menu {
+    display: block;
+    font-size: 2.5rem;
+    color: aliceblue;
+    margin-top: 10px;
+}
+
+#menu ul{
+    display: none;
+}
+
+#bt-menu:checked ~ #menu ul{
+    display: block;
+    padding: 10px 0;
+}
+
+
+/* Descrição */
+.desc {
+    display: none;
+}
+
+#menu li {
+    display: block;
+    margin: 15px 0;
+    border-bottom: 1px solid cornflowerblue;
+    padding-bottom: 10px;
+}
+
+@media not screen {
+    #menu, btn-pedido, #label-menu, #bt-menu {
+        display: none;
+    }
 }
