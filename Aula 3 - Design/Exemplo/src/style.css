@@ -64,6 +64,11 @@
     border-radius: 4px;
 }
 
+img {
+    width: 350px;
+    height: 250px;
+}
+
 .preco {
     display: block;
     color: cornflowerblue;
@@ -109,7 +114,7 @@
     }
 }
 
-/* Telas até 600px */
+/* Telas até 600px - Tablet/ Celular*/
 @media screen and (max-width: 600px), (orientation: portrait){
     #label-menu {
         display: block;
