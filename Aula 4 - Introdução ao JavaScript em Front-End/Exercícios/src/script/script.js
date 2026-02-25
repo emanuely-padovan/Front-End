@@ -54,17 +54,4 @@ if (numero == numeroGerado) {
 
 // Exercício 5 -Gestão de Frota
 
-const anoAtual = new Date()
 
-
-class Veiculo {
-    constructor(modelo, marca, ano) {
-        this.modelo = modelo
-        this.marca = marca
-        this.ano = ano
-    }
-    idadeVeiculo() {
-        let anoT = anoAtual.getFullYear()
-        const idade = this.ano - anoT
-    }
-}
