@@ -26,3 +26,4 @@ console.log("O menu lateral está ativado?:", checkbox.checked);
 console.log("Classes do card:", listaCards[0].classList);
 console.log("LOG do elemento (visão HTML):", topo);
 console.dir(topo);
+

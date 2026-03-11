@@ -43,3 +43,5 @@ const caminhoAtual = foto.getAttribute('src')
 
 // foto.setAttribute('src', 'src/images/esgotado.jpg')
 // foto.setAttribute('alt', 'Prato esgotado!')
+
+imagem_card_um.src = 'esgotado.jpg'
