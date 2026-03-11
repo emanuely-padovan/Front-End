@@ -54,17 +54,19 @@ if (numero == numeroGerado) {
 
 // Exercício 5 -Gestão de Frota
 
-const anoAtual = new Date()
+// class Veiculo {
+//     constructor(modelo, marca, ano) {
+//         this.modelo = modelo
+//         this.marca = marca
+//         this.ano = ano
+//     }
+//     idadeVeiculo() {
+//         const idade = anoAtual - this.ano
+//         return idade
+//     }
+// }
 
+// const carro = new Veiculo("Corolla", "Toyota", 2020)
+// const anoAtual = new Date().getFullYear()
 
-class Veiculo {
-    constructor(modelo, marca, ano) {
-        this.modelo = modelo
-        this.marca = marca
-        this.ano = ano
-    }
-    idadeVeiculo() {
-        let anoT = anoAtual.getFullYear()
-        const idade = this.ano - anoT
-    }
-}
+// alert("Seu " + carro.modelo + " possui " + carro.idadeVeiculo() + "anos.")
