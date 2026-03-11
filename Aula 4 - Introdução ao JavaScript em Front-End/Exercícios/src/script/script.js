@@ -70,3 +70,23 @@ if (numero == numeroGerado) {
 // const anoAtual = new Date().getFullYear()
 
 // alert("Seu " + carro.modelo + " possui " + carro.idadeVeiculo() + "anos.")
+
+// Exercício 5 - Gestão de Frota
+
+    // class Veiculo {
+    //     constructor(modelo, marca, ano) {
+    //         this.modelo = modelo
+    //         this.marca = marca
+    //         this.ano = ano
+    //     }
+    //     idadeVeiculo() {
+    //         const idade = anoAtual - this.ano
+    //         return idade
+    //     }
+    // }
+
+    // const carro = new Veiculo("Corolla", "Toyota", 2020)
+
+    // const anoAtual = new Date().getFullYear()
+
+    // alert("Seu " + carro.modelo + " possui " + carro.idadeVeiculo() + "anos.")
