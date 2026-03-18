@@ -35,3 +35,10 @@ massas.addEventListener('click', (event) => {
         console.log("Você clicou em um botão de pedido massa...")
     }
 })
+
+const botoesPedidos = document.querySelectorAll(".btn-pedido")
+botoesPedidos.forEach((botao) => {
+    botao.addEventListener("click", (event) => {
+        event.preventDefault()
+    })
+})
