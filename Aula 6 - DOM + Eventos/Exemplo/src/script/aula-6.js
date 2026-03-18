@@ -18,3 +18,20 @@ if (inputQtd && textoPreco) {
         textoPreco.style.color = total > 150 ? "#c0392b" : "#e67e22"
     })
 }
+
+// Continuação - 18.03.2026
+
+/*
+btn.addEventListener('click', function() {
+    console.log("O vigia detectou um clique no botão!")
+    btn.textContent = "Processando..."
+})
+*/
+
+const massas = document.querySelector("#secao-massas")
+massas.addEventListener('click', (event) => {
+    const clicado = event.target 
+    if (clicado.classList.contains('btn-pedido')) {
+        console.log("Você clicou em um botão de pedido massa...")
+    }
+})
