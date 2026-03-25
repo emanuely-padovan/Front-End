@@ -13,7 +13,6 @@ if (inputQtd && textoPreco) {
         const precoUnitario = 45.0
         const total = Number(inputQtd.value) * precoUnitario
         textoPreco.textContent = `R$ ${total.toFixed(2)}`
-
         // Mudança sutil de cor
         textoPreco.style.color = total > 150 ? "#c0392b" : "#e67e22"
     })

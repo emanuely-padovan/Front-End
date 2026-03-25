@@ -3,24 +3,49 @@
 
 // Exercício 1 - Interação
 
-const contCurtidas = document.querySelector('#contador')
-const textoCurtidas = document.querySelector('#contador')
+const qtd = document.querySelector('#btn-curtir')
+const totalTxt = document.querySelector('#contador')
 
-if (contCurtidas && textoCurtidas) {
-    contCurtidas.addEventListener('input', () => {
-        const curtidas =+ 1
-        const total = Number(contCurtidas.value) + curtidas
-        textoCurtidas.textContent = `${total}`
+if (qtd && totalTxt) {
+    let contador = 0
+
+    qtd.addEventListener('click', function() {
+        contador++
+        totalTxt.textContent = `${contador}`
     })
 }
 
 // Exercício 2 - Monitoramento
 
+const texto = document.querySelector('#campo-texto')
+const preview = document.querySelector('#preview-texto')
 
+texto.addEventListener('input', () => {
+    preview.textContent = `Digitando: ${texto.value}`
+})
 
 // Exercício 3 - Sensores
 
+const cor = document.querySelector('#caixa-cor')
 
+cor.addEventListener('mouseover', () => {
+    cor.style.background = 'rgb(0, 255, 21)'
+})
 
-// Exercício 4 - Desafio
+cor.addEventListener('mouseout', () => {
+    cor.style.background = ''
+})
 
+// Exercício 4 - Desafio Extra
+
+const reset = document.querySelector('#btn-reset')
+
+if (reset) {
+    reset.addEventListener('click', () => {
+        texto.value = ''
+        preview.textContent = ''
+
+        contador = 0
+        totalTxt.textContent = '0'
+    })
+}
