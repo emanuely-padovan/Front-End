@@ -70,7 +70,7 @@ lasanha.exibirComMoeda());
 // Lista 1 - Aula 4
 
 // Exercício 1 - Personalizador de Acesso
-/*
+
     const nome = prompt("Digite o seu NOME: ")
     const sobrenome = prompt("Digite o seu SOBRENOME: ")
 
@@ -78,20 +78,20 @@ lasanha.exibirComMoeda());
 
     alert("Olá, " + nomeFormatado.toUpperCase)
     alert("Caracteres: " + nomeFormatado.length)
-*/
+
 
 // Exercício 2 - Calculadora de Divisão de Conta
-/*
+
     const valor = prompt("Valor total da conta: ")
     const quantidade = prompt("Quantas pessoas foram? ")
 
     let div = valor/quantidade
 
     alert("Cada amigo deve pagar R$ " + div.toFixed(2))
-*/
+
 
 // Exercício 3 - Validador de Promoção
-/*
+
 const valorCompra = prompt("Quanto foi gasto? ")
 const cupomResposta = prompt("Você possui algum tipo de cupom? (Apenas SIM ou NÃO) ").toLowerCase
 
@@ -106,10 +106,10 @@ if (cupom == true) {
 } else {
     alert("Frete pago!")
 }
-*/
+
 
 // Exercício 4 - Sorteador de Brindes
-/*
+
     const numero = prompt("Escolha um número de 1 a 10!")
     let numeroGerado = Math.floor(Math.random() * 10) + 1
 
@@ -118,10 +118,10 @@ if (cupom == true) {
     } else {
         alert("Que pena, o número sorteado foi " + numeroGerado)
     }
-*/
+
 
 // Exercício 5 -Gestão de Frota
-/*
+
     class Veiculo {
         constructor(modelo, marca, ano) {
             this.modelo = modelo
@@ -139,10 +139,10 @@ if (cupom == true) {
     const anoAtual = new Date().getFullYear()
 
     alert("Seu " + carro.modelo + " possui " + carro.idadeVeiculo() + "anos.")
-*/
+
 
 // Exercício 5 - Gestão de Frota
-/*
+
     class Veiculo {
         constructor(modelo, marca, ano) {
             this.modelo = modelo
@@ -160,7 +160,7 @@ if (cupom == true) {
     const anoAtual = new Date().getFullYear()
 
     alert("Seu " + carro.modelo + " possui " + carro.idadeVeiculo() + "anos.")
-*/
+
 
 
 
@@ -234,7 +234,7 @@ box.style.marginTop = "20px";
 // Lista 2 - Aula 5 - DOM
 
 // Exercício 1 - Identidade
-/*
+
 const nomeCompleto = document.querySelector('#nome-usuario')
 nomeCompleto.textContent = "Emanuely Macedo Padovan"
 
@@ -260,7 +260,7 @@ statusPerfil.textContent = "Status: Ativo"
 
 const skills = document.querySelectorAll('.skill')
 console.log("Quantidade de skills: ", skills.length)
-*/
+
 
 
 
@@ -323,7 +323,7 @@ window.addEventListener('scroll', () => {
 
 
 // Lista 3 - Aula 6 - Dom + Eventos
-/*
+
 // Exercício 1 - Interação
 
 const qtd = document.querySelector('#btn-curtir')
@@ -372,4 +372,3 @@ if (reset) {
         totalTxt.textContent = '0'
     })
 }
-*/
