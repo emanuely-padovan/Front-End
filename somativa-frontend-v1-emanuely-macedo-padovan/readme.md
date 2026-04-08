@@ -25,5 +25,5 @@ O projeto foi organizado seguindo boas práticas de mercado:
 * **Arquivar Conteúdo:** Limpeza de dados na lista de desejos, com alertas de alteração e função que traz o mouse do usuário para o campo novamente.
 
 ## 👨‍💻 Autor
-Emanuely Macedo Padovan
-GitHub: emanuely-padovan
+* Emanuely Macedo Padovan
+* **GitHub:** emanuely-padovan
