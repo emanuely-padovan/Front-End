@@ -13,3 +13,25 @@ if (horaAgora < 12) {
     boasvindas.textContent = "Seu computador apresenta algum erro..."
 }
 
+// Missão 2 - Tema de Leitura (Eventos)
+/*
+const secao = document.querySelector('.painel')
+secao.classList.add('.tema-sepia')
+
+secao.addEventListener('mouseover', () => {
+    secao.classList.add('.tema-sepia')
+})
+
+secao.addEventListener('mouseout', () => {
+    secao.classList.remove('.tema-sepia')
+})
+*/
+
+// Missão 3 - Calculadora de Coleção (Evento)
+const campoQtd = document.querySelector('#qtd-livros')
+const total = document.querySelector('#total-pagar')
+
+campoQtd.addEventListener('input', () => {
+    const valor = Number(campoQtd.value) * 42.00
+    total.textContent = `${valor.toFixed(2)}`
+})
