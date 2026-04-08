@@ -1,4 +1,4 @@
-# 💻 BookWorm
+# 💻 BookWorm - Clube de Leitura e Venda
 
 Este é um projeto desenvolvido para a avaliação de Front-End, focado em criar um site interativo para um clube de leitura e venda de clássicos.
 
@@ -15,13 +15,15 @@ O projeto foi organizado seguindo boas práticas de mercado:
     ├── styles/  (Estilos da página)
     ├── scripts/ (Lógica de interação)
     └── images/  (Ativos visuais)
+└── README.md
 
 ## 🚀 Funcionalidades Implementadas
-* **Interatividade Visual:** Elementos que reagem ao passar do mouse (Hover e manipulação de Classes).
-* **Saudação Dinâmica:** Mensagem de boas-vindas que muda conforme o horário local do usuário.
-* **Cálculo em Tempo Real:** Formulário que processa e exibe resultados assim que o usuário digita.
-* **Injeção de Conteúdo:** Adição de novos itens na tela utilizando manipulação de DOM.
+* **Saudação Dinâmica:** Mensagem de boas-vindas aos leitores, que muda conforme o horário local.
+* **Tema Visual:** Paínel que reage ao passar do mouse para mudança de cores da página (Sepia Mode).
+* **Cálculo em Tempo Real:** Formulário que calcula o valor conforme unidades de livros vão sendo adicionadas.
+* **Injeção de Conteúdo:** Adição de novos itens na lista de leitura.
+* **Arquivar Conteúdo:** Limpeza de dados na lista de desejos, com alertas de alteração e função que traz o mouse do usuário para o campo novamente.
 
 ## 👨‍💻 Autor
-[Seu Nome Completo]
-[Seu LinkedIn ou GitHub]
+Emanuely Macedo Padovan
+GitHub: emanuely-padovan
