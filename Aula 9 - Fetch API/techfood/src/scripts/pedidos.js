@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     configurarLimparPedidos();
 });
 
-    function renderizarPedidos() {
+function renderizarPedidos() {
     const lista        = document.querySelector("#lista-pedidos");
     const spanTotal    = document.querySelector("#valor-total");
     const spanResumo   = document.querySelector("#valor-total-resumo");
