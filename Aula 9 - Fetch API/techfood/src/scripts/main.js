@@ -1,10 +1,13 @@
 
 document.addEventListener("DOMContentLoaded", function () {
-  inicializarSubtotal();
+  renderizarCardapio()
+  //inicializarSubtotal();
   inicializarHoverCards();
   inicializarVitrine();
 });
 
+// Foi adicionada dentro de renderizar cardápio
+/*
 function inicializarSubtotal() {
   const inputQtd = document.querySelector("#qtd-lasanha");
   const precoTexto = document.querySelector("#preco-lasanha");
@@ -29,6 +32,40 @@ function inicializarSubtotal() {
           : "";
     }
   });
+}*/
+
+// Recepção de dados do Banco
+async function renderizarCardapio() {
+  const grid = document.getElementById("#grid-cardapio")
+  if(!grid) return
+
+  grid.innerHTML = "<p class='loading'> Carregando cardápio...</p>"
+
+  try {
+    const produtos = await buscarProdutos()
+    grid.innerHTML = ""
+    produtos.forEach(function(produto) {
+      const card = document.createElement("article")
+      card.classList.add("card")
+      card.setAttribute("data-id", produto.id)
+
+      card.innerHTML = 
+        `<h3>${produto.nome}</h3>` + 
+        `<p class='desc'>${produto.descricao}</p>` + 
+        `<div class='quantidade-box'>` + 
+          `<button class='btn-qtd btn-menos'>-</button>` +
+          `<span class='qtd-valor'>1</span>` +
+          `<button class='btn-qtd btn-mais'>+</button>` +
+        `</div>` + 
+        `<span class='preco' data-preco='${produto.preco}'>` + 
+          `R$ ${parseFloat(produto.preco).toFixed(2).replace(".", ",")}` +
+        `</span>` + 
+        `<button class='btn-pedido'>Pedir Agora</button>`
+      grid.appendChild(card)
+    })
+  } catch (error) {
+    grid.innerHTML = "<p class='loading erro'> Erro ao carregar o cardápio.Verifique se o servidor está rodando.</p>"
+  }
 }
 
 function inicializarHoverCards() {
@@ -74,6 +111,11 @@ function inicializarVitrine() {
     if (clicado.classList.contains("btn-pedido")) {
       event.preventDefault();
 
+      const card = clicado.parentElement
+      // Linhas adicionais
+
+
+      /*
       const card = clicado.parentElement;
       const nomePrato = card.querySelector("h3").textContent;
       const quantidade = Number(card.querySelector(".qtd-valor").textContent);
@@ -109,10 +151,10 @@ function inicializarVitrine() {
       setTimeout(function () {
         const badge = card.querySelector(".badge-adicionado");
         if (badge) badge.remove();
-      }, 2000);
+      }, 2000);*/
 
-      salvarPedido({ nome: nomePrato, preco: preco, qtd: quantidade });
-      atualizarContadorPedidos();
+      salvarPedido(produtoId, quantidade, clicado);
+      //atualizarContadorPedidos();
     }
   });
 }
