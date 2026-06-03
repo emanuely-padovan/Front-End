@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/styles/global.css">
+    <link rel="stylesheet" href="./src/styles/cadastro.css">
+    <title>TechFood - Sabor & Saber</title>
+</head>
+<body>
+    <header id="topo">
+        <h1 id="titulo-site">TechFood - Sabor & Saber</h1>
+        <nav id="menu-padrao">
+            <ul>
+                <li><a href="index.html">Cardápio</a></li>
+                <li><a href="pedidos.html">Meus Pedidos</a></li>
+                <li><a href="cadastro.html">Cadastrar Prato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="secao-cadastro">
+            <h2>Cadastro de Produto:</h2>
+            <form action="/produto" method="post">
+                <label for="nome-produto"></label>
+            </form>
+            <button id="btn-criar-produto">Criar Produto</button>
+        </section>
+    </main>
+    <footer></footer>
+
+    <script src="./src/scripts/global.js"></script>
+    <script src="./src/scripts/api.js"></script>
+</body>
+</html>
