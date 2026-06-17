@@ -1,0 +1,323 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #000;
+    color: #fff;
+}
+
+/* HEADER */
+
+#cabecalho {
+    background: #16133a;
+    height: 70px;
+    padding: 0 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-area h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* DASHBOARD */
+
+#dashboard {
+    padding: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1.3fr 320px;
+    gap: 25px;
+    min-height: calc(100vh - 70px);
+}
+
+/* CARDS */
+
+article,
+.card-gases,
+.alert-card,
+#coluna-direita {
+    background: #444242;
+    border-radius: 10px;
+}
+
+/* COLUNA ESQUERDA */
+
+.coluna-esquerda {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.secao-estado-atual {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.secao-estado-atual h3,
+.coluna-esquerda article h3 {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.secao-estado-atual p,
+.coluna-esquerda article p {
+    color: #cfcfcf;
+    font-size: .85rem;
+    margin-bottom: 15px;
+}
+
+/* LCD */
+
+.card-lcd {
+    background: #444242;
+    border-radius: 10px;
+    height: 170px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.card-lcd h2 {
+    color: #00ff55;
+    letter-spacing: 4px;
+    font-size: 2rem;
+}
+
+.card-lcd span {
+    color: #00ff55;
+    font-size: 2rem;
+}
+
+/* TEMPERATURA */
+
+.card-temperatura {
+    background: #444242;
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+}
+
+.badge {
+    background: #2f2f2f;
+    color: white;
+    font-weight: bold;
+    font-size: .8rem;
+    padding: 4px 10px;
+    border-radius: 15px;
+}
+
+.card-temperatura h1 {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+
+    color: #34ff4e;
+    font-size: 4rem;
+}
+
+.grafico {
+    margin-top: 40px;
+    height: 70px;
+    background: linear-gradient(
+        to right,
+        #d8d8d8 20%,
+        #c8c8c8 20% 40%,
+        #bdbdbd 40% 60%,
+        #d8d8d8 60% 80%,
+        #0d5eff 80%
+    );
+}
+
+/* ILUMINAÇÃO */
+
+.coluna-esquerda article:last-child {
+    padding: 25px;
+}
+
+.icon-grid {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.icon-box {
+    background: #757575;
+    border-radius: 10px;
+    height: 120px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    font-size: .85rem;
+}
+
+/* CENTRO */
+
+#centro {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.card-gases {
+    padding: 25px;
+}
+
+.card-gases h2 {
+    margin-bottom: 25px;
+}
+
+.gas-item {
+    margin-bottom: 30px;
+}
+
+.gas-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.gas-header span {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.gas-header strong {
+    font-size: 1.5rem;
+}
+
+.bar {
+    height: 22px;
+    background: #8a8a8a;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.fill {
+    width: 35%;
+    height: 100%;
+    background: #0d5eff;
+    border-radius: 20px;
+}
+
+/* ALERTAS */
+
+#notificacoes {
+    display: flex;
+    gap: 20px;
+}
+
+.alert-card {
+    flex: 1;
+    position: relative;
+    padding: 20px;
+    border-left: 8px solid #ff4040;
+}
+
+.alert-dot {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+
+    width: 12px;
+    height: 12px;
+    background: white;
+    border-radius: 50%;
+}
+
+.alert-card h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.alert-card p {
+    color: #e4e4e4;
+    margin-bottom: 15px;
+}
+
+.critico {
+    display: inline-block;
+    border: 1px solid #00ff55;
+    color: #00ff55;
+    border-radius: 15px;
+    padding: 4px 18px;
+    font-size: .8rem;
+    font-weight: bold;
+}
+
+/* DIREITA */
+
+#coluna-direita {
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#coluna-direita h2 {
+    font-size: 2rem;
+}
+
+.btn-alarme {
+    background: #d64040;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    height: 180px;
+
+    font-size: 1.8rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-despacho {
+    background: transparent;
+    border: 2px solid #ff4040;
+    color: #ff4040;
+
+    height: 60px;
+    border-radius: 10px;
+
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 1200px) {
+    #dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    #notificacoes {
+        flex-direction: column;
+    }
+
+    .icon-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
