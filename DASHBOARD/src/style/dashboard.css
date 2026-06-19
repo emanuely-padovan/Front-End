@@ -1,323 +1,282 @@
-/* RESET */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #000;
-    color: #fff;
+body{
+    background:#000;
+    color:#fff;
 }
 
-/* HEADER */
-
-#cabecalho {
-    background: #16133a;
-    height: 70px;
-    padding: 0 20px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+#cabeçalho{
+    background:#181538;
+    padding:15px 25px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
-.logo-area {
-    display: flex;
-    align-items: center;
-    gap: 15px;
+.logo-area{
+    display:flex;
+    align-items:center;
+    gap:15px;
 }
 
-.logo-area h2 {
-    font-size: 1.5rem;
-    font-weight: bold;
+.logo-area img{
+    width:40px;
 }
 
-/* DASHBOARD */
-
-#dashboard {
-    padding: 25px;
-    display: grid;
-    grid-template-columns: 1fr 1.3fr 320px;
-    gap: 25px;
-    min-height: calc(100vh - 70px);
+#dashboard{
+    display:grid;
+    grid-template-columns:1fr 2fr 250px;
+    gap:25px;
+    padding:30px;
 }
 
-/* CARDS */
+.coluna-esquerda{
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+}
 
-article,
+.secao-estado-atual p{
+    color:#aaa;
+    font-size:12px;
+    margin-top:5px;
+}
+
+.card-lcd,
+.card-temperatura,
 .card-gases,
-.alert-card,
-#coluna-direita {
-    background: #444242;
-    border-radius: 10px;
+.alerta{
+    background:#424040;
+    border-radius:10px;
+    padding:20px;
+    margin-top:15px;
 }
 
-/* COLUNA ESQUERDA */
-
-.coluna-esquerda {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
+.card-lcd{
+    height:130px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
 }
 
-.secao-estado-atual {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+.card-lcd h2{
+    color:#19ff56;
+    letter-spacing:3px;
 }
 
-.secao-estado-atual h3,
-.coluna-esquerda article h3 {
-    font-size: 1.8rem;
-    margin-bottom: 5px;
+.card-lcd span{
+    color:#19ff56;
+    font-size:25px;
 }
 
-.secao-estado-atual p,
-.coluna-esquerda article p {
-    color: #cfcfcf;
-    font-size: .85rem;
-    margin-bottom: 15px;
+.card-temperatura{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
-/* LCD */
-
-.card-lcd {
-    background: #444242;
-    border-radius: 10px;
-    height: 170px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+.badge{
+    background:#2d2d2d;
+    padding:5px 12px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:bold;
 }
 
-.card-lcd h2 {
-    color: #00ff55;
-    letter-spacing: 4px;
-    font-size: 2rem;
+.card-temperatura h1{
+    color:#31ff53;
+    font-size:60px;
+    margin-top:10px;
 }
 
-.card-lcd span {
-    color: #00ff55;
-    font-size: 2rem;
+.grafico{
+    display:flex;
+    align-items:flex-end;
+    gap:2px;
+    height:90px;
 }
 
-/* TEMPERATURA */
-
-.card-temperatura {
-    background: #444242;
-    border-radius: 10px;
-    padding: 20px;
-    position: relative;
+.grafico div{
+    width:48px;
+    background:#d6d6d6;
 }
 
-.badge {
-    background: #2f2f2f;
-    color: white;
-    font-weight: bold;
-    font-size: .8rem;
-    padding: 4px 10px;
-    border-radius: 15px;
+.grafico div:nth-child(1){
+    height:25px;
 }
 
-.card-temperatura h1 {
-    position: absolute;
-    right: 20px;
-    top: 20px;
-
-    color: #34ff4e;
-    font-size: 4rem;
+.grafico div:nth-child(2){
+    height:40px;
 }
 
-.grafico {
-    margin-top: 40px;
-    height: 70px;
-    background: linear-gradient(
-        to right,
-        #d8d8d8 20%,
-        #c8c8c8 20% 40%,
-        #bdbdbd 40% 60%,
-        #d8d8d8 60% 80%,
-        #0d5eff 80%
-    );
+.grafico div:nth-child(3){
+    height:32px;
 }
 
-/* ILUMINAÇÃO */
-
-.coluna-esquerda article:last-child {
-    padding: 25px;
+.grafico div:nth-child(4){
+    height:48px;
 }
 
-.icon-grid {
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
+.grafico .ativo{
+    height:28px;
+    background:#1763ff;
 }
 
-.icon-box {
-    background: #757575;
-    border-radius: 10px;
-    height: 120px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    text-align: center;
-    padding: 10px;
-    font-weight: bold;
-    font-size: .85rem;
+.card-gases{
+    background:#424040;
+    border-radius:10px;
+    padding:20px;
 }
 
-/* CENTRO */
-
-#centro {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
+.gas-item{
+    margin-bottom:25px;
 }
 
-.card-gases {
-    padding: 25px;
+.gas-item:last-child{
+    margin-bottom:0;
 }
 
-.card-gases h2 {
-    margin-bottom: 25px;
+.gas-header{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:10px;
 }
 
-.gas-item {
-    margin-bottom: 30px;
+.bar{
+    height:20px;
+    background:#8f8f8f;
+    border-radius:20px;
+    overflow:hidden;
 }
 
-.gas-header {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
+.fill{
+    width:35%;
+    height:100%;
+    background:#1763ff;
 }
 
-.gas-header span {
-    font-size: 1.1rem;
-    font-weight: bold;
+.card-alertas{
+    margin-top:25px;
+    display:flex;
+    gap:20px;
 }
 
-.gas-header strong {
-    font-size: 1.5rem;
+.alerta{
+    flex:1;
+    border-left:8px solid #e53935;
+    position:relative;
 }
 
-.bar {
-    height: 22px;
-    background: #8a8a8a;
-    border-radius: 20px;
-    overflow: hidden;
+.alert-dot{
+    width:12px;
+    height:12px;
+    border-radius:50%;
+    background:#fff;
+    position:absolute;
+    top:15px;
+    right:15px;
 }
 
-.fill {
-    width: 35%;
-    height: 100%;
-    background: #0d5eff;
-    border-radius: 20px;
+.critico{
+    display:inline-block;
+    margin-top:15px;
+    padding:4px 15px;
+    border:1px solid #00ff5a;
+    border-radius:15px;
+    color:#00ff5a;
+    font-size:12px;
 }
 
-/* ALERTAS */
-
-#notificacoes {
-    display: flex;
-    gap: 20px;
+.icon-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    margin-top:20px;
 }
 
-.alert-card {
-    flex: 1;
-    position: relative;
-    padding: 20px;
-    border-left: 8px solid #ff4040;
+.icon-box{
+    background:#777;
+    border-radius:10px;
+    padding:20px;
+    text-align:center;
 }
 
-.alert-dot {
-    position: absolute;
-    right: 15px;
-    top: 15px;
-
-    width: 12px;
-    height: 12px;
-    background: white;
-    border-radius: 50%;
+.icon-box span{
+    display:block;
+    font-size:12px;
+    font-weight:bold;
 }
 
-.alert-card h3 {
-    font-size: 2rem;
-    margin-bottom: 10px;
+#dashboard section:last-child h2{
+    margin-bottom:15px;
 }
 
-.alert-card p {
-    color: #e4e4e4;
-    margin-bottom: 15px;
+.btn-alarme{
+    width:100%;
+    height:140px;
+    border:none;
+    border-radius:8px;
+    background:#d63e3e;
+    color:white;
+    font-size:22px;
+    font-weight:bold;
+    cursor:pointer;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    gap:15px;
 }
 
-.critico {
-    display: inline-block;
-    border: 1px solid #00ff55;
-    color: #00ff55;
-    border-radius: 15px;
-    padding: 4px 18px;
-    font-size: .8rem;
-    font-weight: bold;
+.btn-despacho{
+    width:100%;
+    margin-top:20px;
+    padding:18px;
+    background:transparent;
+    border:2px solid #ff3131;
+    color:#ff3131;
+    font-size:18px;
+    border-radius:8px;
+    cursor:pointer;
 }
 
-/* DIREITA */
+@media(max-width:1200px){
 
-#coluna-direita {
-    background: transparent;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-#coluna-direita h2 {
-    font-size: 2rem;
-}
-
-.btn-alarme {
-    background: #d64040;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    height: 180px;
-
-    font-size: 1.8rem;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.btn-despacho {
-    background: transparent;
-    border: 2px solid #ff4040;
-    color: #ff4040;
-
-    height: 60px;
-    border-radius: 10px;
-
-    font-size: 1.2rem;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-/* RESPONSIVO */
-
-@media (max-width: 1200px) {
-    #dashboard {
-        grid-template-columns: 1fr;
+    #dashboard{
+        grid-template-columns:1fr;
     }
 
-    #notificacoes {
-        flex-direction: column;
+    .card-alertas{
+        flex-direction:column;
     }
 
-    .icon-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .icon-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:768px){
+
+    #dashboard{
+        padding:20px;
+    }
+
+    .card-temperatura{
+        flex-direction:column;
+        gap:20px;
+        text-align:center;
+    }
+
+    .icon-grid{
+        grid-template-columns:1fr;
+    }
+
+    .card-alertas{
+        flex-direction:column;
     }
 }
